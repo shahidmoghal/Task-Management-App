@@ -35,6 +35,8 @@ Enable Authentication (Google Sign-In & Email/Password login).
 
 Create a Firestore Database (if using for data storage).
 
+USe your Auth Credentials in place of the existing ones.
+
 **Run the development server:**
 
 npm run dev
