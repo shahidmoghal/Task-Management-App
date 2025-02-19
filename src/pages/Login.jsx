@@ -8,7 +8,7 @@ const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);
   const [error, setError] = useState('');
 
-  // Google Sign-In
+  
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -17,7 +17,7 @@ const Login = () => {
     }
   };
 
-  // Email/Password Login
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -27,10 +27,10 @@ const Login = () => {
     }
   };
 
-  // Email/Password Registration
+  
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError(""); 
   
     if (password.length < 6) {
       setError("Password must be at least 6 characters.");
@@ -42,7 +42,7 @@ const Login = () => {
       console.log("Account created successfully!");
     } catch (error) {
       console.error("Registration Error:", error);
-      setError(error.message); // Display actual Firebase error message
+      setError(error.message); 
     }
   };
   
@@ -53,7 +53,7 @@ const Login = () => {
 
       {error && <p className="text-red-500">{error}</p>}
 
-      {/* Email & Password Form */}
+      
       <form className="flex flex-col items-center gap-3">
         <input 
           type="email" 
@@ -83,12 +83,12 @@ const Login = () => {
         )}
       </form>
 
-      {/* Toggle between Login/Register */}
+     
       <p className="mt-2 cursor-pointer text-blue-500" onClick={() => setIsRegistering(!isRegistering)}>
         {isRegistering ? "Already have an account? Login" : "Don't have an account? Register"}
       </p>
 
-      {/* Google Sign-In */}
+     
       <button 
         onClick={handleGoogleLogin} 
         className="px-4 py-2 mt-4 bg-red-600 text-white rounded w-64">

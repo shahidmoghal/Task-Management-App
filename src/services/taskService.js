@@ -1,6 +1,4 @@
-// src/services/taskService.js
 
-// Simulate a simple in-memory database
 let tasks = [];
 
 export const getTasks = () => {

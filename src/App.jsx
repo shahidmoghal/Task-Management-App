@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { auth } from './firebase'; // Import Firebase auth instance
+import { auth } from './firebase'; 
 import KanbanBoard from './components/KanbanBoard/KanbanBoard';
 import Login from './pages/Login';
 
@@ -7,7 +7,7 @@ const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Listen for authentication state changes
+   
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
     });
